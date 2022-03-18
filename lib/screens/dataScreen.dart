@@ -1,0 +1,71 @@
+import 'package:flutter/material.dart';
+class Datos extends StatelessWidget {
+const Datos({Key? key}) : super(key: key);
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Datos'),
+        backgroundColor: const Color.fromARGB(255, 0, 133, 88),
+        centerTitle: true,
+        elevation: 20.0,
+        shadowColor: const Color.fromARGB(255, 0, 255, 76),
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(bottom: Radius.circular(15))),),
+      body: Center(
+        child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+        const SizedBox(
+        height: 20.0,
+        ),
+
+            Container(
+          width: 300.0,
+          height: 300.0,
+          padding: const EdgeInsets.all(15.0),
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                    image: NetworkImage('https://lh3.googleusercontent.com/a-/AOh14Gi4NR-3NGUnP-iHPmij2x1raG4Yu6g9L9-LBn6d=s288-p-rw-no')
+                    ))),
+              const Text('Tecnologias de la informacion y comunicacion',
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.w900,
+                  ),
+                  textAlign: TextAlign.center),
+              const SizedBox(height: 10.0),
+              const Text(
+                'Gutierrez Rabanales Edgardo',
+                style: TextStyle(
+                  fontSize: 25,
+                ),
+              ),
+              const SizedBox(height: 10.0),
+              const Text(
+                'Grupo: TI02SM-20',
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                  const Color.fromARGB(255, 30, 184, 55)),
+                    padding: MaterialStateProperty.all(
+                    const EdgeInsets.symmetric(
+                    horizontal: 25, vertical: 15)),
+                    textStyle: MaterialStateProperty.all(
+                    const TextStyle(fontSize: 15))),
+                child: const Text('Regresar'),
+                onPressed: () => Navigator.pop(context),
+              )
+            ]),
+      ),
+    );
+  }
+}
